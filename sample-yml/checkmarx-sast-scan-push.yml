@@ -31,6 +31,9 @@ jobs:
       with:
         project: <ProjectName> # <-- Insert Checkmarx SAST Project Name
         team: /CxServer/TeamName
+        checkmarx_version: 9.0
+        checkmarx_client-id: resource_owner_client
+        checkmarx_scope: access_control_api sast_rest_api
         checkmarx_url: ${{ secrets.CHECKMARX_URL }} # To be stored in GitHub Secrets.
         checkmarx_username: ${{ secrets.CHECKMARX_USER }} # To be stored in GitHub Secrets.
         checkmarx_password: ${{ secrets.CHECKMARX_PASSWORD }} # To be stored in GitHub Secrets.
