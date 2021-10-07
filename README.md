@@ -35,8 +35,9 @@ The GitHub action  [![Latest Release](https://img.shields.io/github/v/release/ch
 | app | AppID-1234 | Unique Application Identifier used by downstream bug trackers (i.e. Jira) | String | No | SampleApp |
 | preset | Checkmarx Express | Checkmarx scan preset (SAST) | String | No | High and Medium |
 | break_build | true | Break build based on results? | Boolean | No | false |
-| bug_tracker | Sarif, GitHubPull, GitHub | Bug-tracker used for scan results | String | No | Sarif |
+| bug_tracker | Sarif, GitHubPull, GitHub | Bug-tracker used for scan results | String | No | Sarif 
 | incremental | true | Trigger scan as incremental? (SAST) | Boolean | No | true |
+| configuration | MultiLanguageMode | Configuration to use (SAST) | String | No | true |
 | github_token | ${{ secrets.GITHUB_TOKEN }} | GitHub API Token, used for PR Feedback or GitHub Issue Feedback | String | No | ${{ github.token }} |
 | scanners | sast, cxgo, sca | Vulnerability Scanners (sast, sca, cxgo). Multiple comma seperated values allowed. | String | Yes | None |
 | sca_api_url | https://api.scacheckmarx.com | API URL for SCA scan | String | No | https://api.scacheckmarx.com  |
