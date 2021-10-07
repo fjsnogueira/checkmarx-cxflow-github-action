@@ -46,6 +46,10 @@ inputs:
     required: false
     default: true
     description: 'Incremental Scans?'
+  configuration:
+    required: false
+    default: 'MultiLanguageScan'
+    description: 'Configuration'
   params:
     required: false
     default: ''
@@ -109,6 +113,7 @@ runs:
     - ${{ inputs.checkmarx_url }}
     - ${{ inputs.preset }}
     - ${{ inputs.incremental }}
+    - ${{ inputs.configuration }}
     - ${{ inputs.break_build }}
     - ${{ inputs.params }}
     - ${{ inputs.github_token }}
@@ -134,6 +139,7 @@ runs:
     CHECKMARX_BASE_URL: ${{ inputs.checkmarx_url }}
     CHECKMARX_SCAN_PRESET: ${{ inputs.preset }}
     CHECKMARX_INCREMENTAL: ${{ inputs.incremental }}
+    CHECKMARX_CONFIGURATION: ${{ inputs.configuration }}
     CX_FLOW_BREAK_BUILD: ${{ inputs.break_build }}
     CXFLOW_PARAMS: ${{ inputs.params }}
     CX_FLOW_ENABLED_VULNERABILITY_SCANNERS: ${{ inputs.scanners }}
